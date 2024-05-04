@@ -104,20 +104,24 @@ CREATE TABLE us_states (
     PRIMARY KEY (id)
 );
 
-
-);
-
-
-
-
-
-
-
-
-
 ---
 --- Add foreign key constraints
 ---
+
+
+ALTER TABLE orders
+ADD CONSTRAINT fk_orders_customers
+FOREIGN KEY (customer_id)
+REFERENCES customers (id);
+
+
+
+
+
+
+
+
+
 
 -- PRODUCTS
 
