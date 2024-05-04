@@ -43,6 +43,44 @@ CREATE TABLE categories (
 
 -- TODO create more tables here...
 
+CREATE TABLE supplier (
+    id SERIAL,
+    name TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE customers (
+    id SERIAL,
+    company_name TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE employees (
+    id SERIAL,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE orders (
+    id SERIAL,
+    date DATE,
+    customer_id INT NOT NULL,
+    employee_id INT,
+    PRIMARY KEY (id)
+);
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 --- Add foreign key constraints
@@ -57,4 +95,3 @@ REFERENCES categories (id);
 
 
 -- TODO create more constraints here...
-
