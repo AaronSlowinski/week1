@@ -152,4 +152,10 @@ ADD CONSTRAINT fk_employee_territories_territories
 FOREIGN KEY (territory_id)
 REFERENCES territory (id);
 
+ALTER TABLE offices
+ADD CONSTRAINT fk_offices_territories
+FOREIGN KEY (territory_id)
+REFERENCES territory (id);
+
+
 -- TODO create more constraints here...
