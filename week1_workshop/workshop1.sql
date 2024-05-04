@@ -90,7 +90,12 @@ CREATE TABLE employee_territories(
     PRIMARY KEY (employee_id, territory_id)
 );
 
-
+CREATE TABLE offices (
+    id INT NOT NULL,
+    address_line TEXT NOT NULL,
+    territory_id INT NOT NULL,
+    PRIMARY KEY (id)
+);
 
 
 
