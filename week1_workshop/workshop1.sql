@@ -125,22 +125,23 @@ FOREIGN KEY (supplier_id)
 REFERENCES supplier (id);
 
 
-ALTER TABLE products
-ADD CONSTRAINT fk_products_categories
-FOREIGN KEY (category_id)
-REFERENCES categories (id);
-
-
-
-
-
-
 -- PRODUCTS
 
 ALTER TABLE products
 ADD CONSTRAINT fk_products_categories 
 FOREIGN KEY (category_id) 
 REFERENCES categories (id);
+
+ALTER TABLE orders_products
+ADD CONSTRAINT fk_orders_products_products
+FOREIGN KEY (product_id)
+REFERENCES products (id);
+
+ALTER TABLE orders_products
+ADD CONSTRAINT fk_orders_products_orders
+FOREIGN KEY (order_id)
+REFERENCES orders (id);
+
 
 
 -- TODO create more constraints here...
