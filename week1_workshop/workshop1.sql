@@ -142,6 +142,14 @@ ADD CONSTRAINT fk_orders_products_orders
 FOREIGN KEY (order_id)
 REFERENCES orders (id);
 
+ALTER TABLE employee_territories
+ADD CONSTRAINT fk_employee_territories_employees
+FOREIGN KEY (employee_id)
+REFERENCES employees (id);
 
+ALTER TABLE employee_territories
+ADD CONSTRAINT fk_employee_territories_territories
+FOREIGN KEY (territory_id)
+REFERENCES territory (id);
 
 -- TODO create more constraints here...
