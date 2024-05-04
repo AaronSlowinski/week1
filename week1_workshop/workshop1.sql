@@ -97,7 +97,15 @@ CREATE TABLE offices (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE us_states (
+    id INT NOT NULL,
+    name TEXT NOT NULL,
+    abbreviation CHARACTER(2) NOT NULL,
+    PRIMARY KEY (id)
+);
 
+
+);
 
 
 
